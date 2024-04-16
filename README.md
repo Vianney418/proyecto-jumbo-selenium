@@ -23,3 +23,10 @@ Para ejecutar las pruebas, simplemente ejecuta el siguiente comando desde la ra√
  ```
 mvn clean compile
 ```
+
+
+Para ejecutar las pruebas, por tags especificos ejecuta un comando parecido al siguiente:
+
+ ```
+mvn clean verify -Dcucumber.filter.tags="@MIETIQUETA"
+```

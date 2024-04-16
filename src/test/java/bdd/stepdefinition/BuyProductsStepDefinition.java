@@ -66,7 +66,4 @@ public class BuyProductsStepDefinition {
     @And("Click on: Confirm empty cart")
     public void clickBtnConfirmEmpty() {buyProductsStep.stepClickBtnConfirmEmpty();}
 
-
-
-
 }
