@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         publish = true,
         features = {"src/test/resources/features"},
         glue = {"bdd.stepdefinition"},
-        tags = "@TEST2")
+        tags = "@TEST2 or @TEST1")
 
 public class Runner {
 }
