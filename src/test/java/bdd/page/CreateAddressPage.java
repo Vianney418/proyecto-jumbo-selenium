@@ -47,7 +47,7 @@ public class CreateAddressPage extends DOM {
 
 
     public void clickonButtonDeliveryMethod(){
-        implicitWaitOfElement(30);
+        implicitWaitOfElement(60);
         //waitVisibilityOfElement(btnDeliveryMethod,30);
         onclick(btnDeliveryMethod);}
 
