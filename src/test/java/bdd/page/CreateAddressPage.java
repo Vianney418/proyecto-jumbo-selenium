@@ -97,6 +97,7 @@ public class CreateAddressPage extends DOM {
        return getText(btnDelivedAddress);
     }
 
-
+   // public void quitBrowser(){
+      //  quitDriver();}
 
 }

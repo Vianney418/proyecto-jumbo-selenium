@@ -87,4 +87,5 @@ public class BuyProductsPage extends DOM {
         onclick(btnConfirmEmpty);
     }
 
+
 }

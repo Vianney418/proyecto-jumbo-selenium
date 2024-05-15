@@ -2,13 +2,17 @@ package bdd.stepdefinition;
 
 import bdd.step.CreateAddressStep;
 import bdd.webdriver.DOM;
+import bdd.webdriver.WebDriverFactory;
+import io.cucumber.java.AfterAll;
 import io.cucumber.java.BeforeStep;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.After;
+import io.cucumber.java.After;
+
+
 import org.junit.Before;
 import org.junit.jupiter.api.Assertions;
 
@@ -27,16 +31,18 @@ public class CreateAddressStepDefinition {
     }
 
 
-    @After
-    public void afterScenario(){
-        dom.quitDriver();
-    }
-
     @BeforeStep
     public void beforeEachStep(Scenario scenario){
         this.scenario = scenario;
         dom.takeScreenShot(scenario);
     }
+
+
+    @After
+    public void afterScenario(){
+        dom.quitDriver();
+    }
+
 
     @Given("login to the jumbo website {string}")
     public void loginToTheJumboWebsite (String url){
@@ -76,6 +82,9 @@ public class CreateAddressStepDefinition {
     public void validateDeliveryAddress(String txtResuldoEsperado){
         Assertions.assertEquals(txtResuldoEsperado, createAddressStep.stepValidateDeliveryAddress());
     }
+
+    //@And (" ")
+
 
 
 
