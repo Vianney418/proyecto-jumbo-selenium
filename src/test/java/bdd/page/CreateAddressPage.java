@@ -47,8 +47,7 @@ public class CreateAddressPage extends DOM {
 
 
     public void clickonButtonDeliveryMethod(){
-        implicitWaitOfElement(60);
-        //waitVisibilityOfElement(btnDeliveryMethod,30);
+        waitClikeableElement(btnDeliveryMethod, 30);
         onclick(btnDeliveryMethod);}
 
     public void clickonBtnCreateAddress(){
@@ -82,6 +81,7 @@ public class CreateAddressPage extends DOM {
     }
 
     public void clickSaveBtn(){
+        waitClikeableElement(btnSave, 30);
         onclick(btnSave);
     }
 
@@ -97,7 +97,5 @@ public class CreateAddressPage extends DOM {
        return getText(btnDelivedAddress);
     }
 
-   // public void quitBrowser(){
-      //  quitDriver();}
 
 }
