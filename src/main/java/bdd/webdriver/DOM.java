@@ -26,6 +26,8 @@ public class DOM {
     public void initializeBrowser(String url){
         webDriver().get(url);
         webDriver().manage().window().maximize();
+       // Dimension dimension = new Dimension(1300, 500); // Ancho x Alto
+       // webDriver().manage().window().setSize(dimension);
     }
 
     public static void waitVisibilityOfElement(WebElement element, int timeoutInSeconds) {
@@ -48,11 +50,6 @@ public class DOM {
         actions.keyUp(Keys.ENTER).perform();
     }
 
-    public static void scrollToCoordinates(int x, int y) {
-        JavascriptExecutor js = (JavascriptExecutor) webDriver();
-        js.executeScript("window.scrollTo(arguments[0], arguments[1]);", x, y);
-    }
-
 
     public void onclick(WebElement element){
         element.click();
@@ -73,6 +70,10 @@ public class DOM {
         }catch (Exception e){
             e.printStackTrace();
         }
+    }
+
+    public void scrollToElement(WebElement webElement){
+        ((JavascriptExecutor) webDriver()).executeScript("arguments[0].scrollIntoView(true);", webElement);
     }
 
 

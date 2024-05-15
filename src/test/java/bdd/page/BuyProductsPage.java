@@ -1,6 +1,8 @@
 package bdd.page;
 
 import bdd.webdriver.DOM;
+import bdd.webdriver.WebDriverFactory;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -61,7 +63,7 @@ public class BuyProductsPage extends DOM {
 
     public void clickAddProduct3() {
         waitClikeableElement(btnAdd3, 50);
-        //scrollToCoordinates(10000, 10);
+        scrollToElement(btnAdd3);
         onclick(btnAdd3);
 
     }
