@@ -49,14 +49,14 @@ public class BuyProductsPage extends DOM {
     }
 
     public void clickAddProduct1 (){
-        //scrollToCoordinates(10000, 10);
         waitClikeableElement(btnAdd1, 50);
+        scrollToElement(btnAdd1);
         onclick(btnAdd1);
     }
 
     public void clickAddProduct2() {
         waitClikeableElement(btnAdd2, 50);
-        //scrollToCoordinates(10000, 10);
+        scrollToElement(btnAdd2);
         onclick(btnAdd2);
 
     }

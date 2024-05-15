@@ -9,7 +9,7 @@ public class CreateAddressPage extends DOM {
 
     public void iniciarNavegador(String url){initializeBrowser(url);}
 
-    @FindBy(xpath = "//button[@class='primary-btn popover-delivery-button']")
+    @FindBy(xpath = "//button[@class='delivery-container-desktop']")
     WebElement btnDeliveryMethod;
 
     @FindBy(xpath = "//p[contains(@class,'deliver-address')]")

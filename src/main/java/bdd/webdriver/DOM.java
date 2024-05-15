@@ -25,9 +25,9 @@ public class DOM {
 
     public void initializeBrowser(String url){
         webDriver().get(url);
-        webDriver().manage().window().maximize();
-       // Dimension dimension = new Dimension(1300, 500); // Ancho x Alto
-       // webDriver().manage().window().setSize(dimension);
+        //webDriver().manage().window().maximize();
+       Dimension dimension = new Dimension(1100, 720); // Ancho x Alto
+       webDriver().manage().window().setSize(dimension);
     }
 
     public static void waitVisibilityOfElement(WebElement element, int timeoutInSeconds) {
