@@ -76,9 +76,4 @@ public class DOM {
     }
 
 
-
-public void quitDriver(){
-        webDriver().quit();
-}
-
 }

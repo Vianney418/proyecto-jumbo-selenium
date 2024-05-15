@@ -32,9 +32,6 @@ public class BuyProductsStepDefinition {
         dom.takeScreenShot(scenario);
     }
 
-    @After
-    public void afterScenario(){dom.quitDriver();}
-
     @Given("login to the jumbo site {string}")
     public void startBrowser (String url) {
         buyProductsStep.stepStartBrowser(url);

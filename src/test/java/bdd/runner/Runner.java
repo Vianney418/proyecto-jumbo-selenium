@@ -1,7 +1,9 @@
 package bdd.runner;
 
+import bdd.webdriver.WebDriverFactory;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
+import org.junit.AfterClass;
 import org.junit.runner.RunWith;
 import io.cucumber.java.After;
 
@@ -12,8 +14,13 @@ import io.cucumber.java.After;
         publish = true,
         features = {"src/test/resources/features"},
         glue = {"bdd.stepdefinition"},
-        tags = "@TEST1 or @TEST2")
+        tags ="@TEST1 or @TEST2")
 
 
 public class Runner {
+
+    @AfterClass
+    public static void tearDown() {
+        WebDriverFactory.getWebDriver().quit(); // Llama al método para cerrar el navegador
+    }
 }

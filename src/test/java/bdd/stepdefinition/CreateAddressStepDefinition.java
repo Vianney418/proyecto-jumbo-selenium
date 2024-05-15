@@ -38,12 +38,6 @@ public class CreateAddressStepDefinition {
     }
 
 
-    @After
-    public void afterScenario(){
-        dom.quitDriver();
-    }
-
-
     @Given("login to the jumbo website {string}")
     public void loginToTheJumboWebsite (String url){
         createAddressStep.stepIniciarNavegador(url);
