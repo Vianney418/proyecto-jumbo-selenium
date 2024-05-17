@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.v120.network.Network;
 
+import java.time.Duration;
 import java.util.Optional;
 
 public class WebDriverFactory {
@@ -38,13 +39,9 @@ public class WebDriverFactory {
     }
 
     private static void initializeWebDriver() {
-
-
-
         ChromeOptions chromeOptions = new ChromeOptions();
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(chromeOptions.addArguments("--disable-notifications"));
-
 
         // INSTRUCCIONES PARA SIMULAR UN INTERNET LENTO
 

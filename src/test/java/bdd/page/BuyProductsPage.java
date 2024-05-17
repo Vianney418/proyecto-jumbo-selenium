@@ -8,7 +8,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class BuyProductsPage extends DOM {
 
-
     @FindBy (xpath = "//input[contains(@class,'new-header-search-input')]")
     WebElement btnSearch;
 
@@ -49,25 +48,21 @@ public class BuyProductsPage extends DOM {
     }
 
     public void clickAddProduct1 (){
-        waitVisibilityOfElement(btnAdd1, 30);
-        waitClikeableElement(btnAdd1, 30);
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         scrollToElement(btnAdd1);
         onclick(btnAdd1);
     }
 
     public void clickAddProduct2() {
-        implicitWaitOfElement(10);
-        waitVisibilityOfElement(btnAdd2, 30);
-        waitClikeableElement(btnAdd2, 30);
         scrollToElement(btnAdd2);
         onclick(btnAdd2);
-
     }
 
     public void clickAddProduct3() {
-        implicitWaitOfElement(10);
-        waitVisibilityOfElement(btnAdd3, 30);
-        waitClikeableElement(btnAdd3, 30);
         scrollToElement(btnAdd3);
         onclick(btnAdd3);
 
@@ -85,9 +80,7 @@ public class BuyProductsPage extends DOM {
     }
 
     public void clickBtnEmptyCart() {
-        //waitVisibilityOfElement(btnEmptyCart, 50);
         onclick(btnEmptyCart);
-
     }
 
     public void clickBtnConfirmEmpty(){

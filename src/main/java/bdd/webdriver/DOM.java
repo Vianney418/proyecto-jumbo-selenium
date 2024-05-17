@@ -5,6 +5,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.JavascriptExecutor;
 
@@ -52,7 +53,7 @@ public class DOM {
 
 
     public void onclick(WebElement element){
-        element.click();
+        new WebDriverWait(webDriver(), Duration.ofSeconds(20)).until(ExpectedConditions.elementToBeClickable(element)).click();
     }
 
     public void type(WebElement element, String text) {element.sendKeys(text);}
