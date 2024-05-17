@@ -49,20 +49,25 @@ public class BuyProductsPage extends DOM {
     }
 
     public void clickAddProduct1 (){
-        waitClikeableElement(btnAdd1, 50);
+        waitVisibilityOfElement(btnAdd1, 30);
+        waitClikeableElement(btnAdd1, 30);
         scrollToElement(btnAdd1);
         onclick(btnAdd1);
     }
 
     public void clickAddProduct2() {
-        waitClikeableElement(btnAdd2, 50);
+        implicitWaitOfElement(10);
+        waitVisibilityOfElement(btnAdd2, 30);
+        waitClikeableElement(btnAdd2, 30);
         scrollToElement(btnAdd2);
         onclick(btnAdd2);
 
     }
 
     public void clickAddProduct3() {
-        waitClikeableElement(btnAdd3, 50);
+        implicitWaitOfElement(10);
+        waitVisibilityOfElement(btnAdd3, 30);
+        waitClikeableElement(btnAdd3, 30);
         scrollToElement(btnAdd3);
         onclick(btnAdd3);
 
