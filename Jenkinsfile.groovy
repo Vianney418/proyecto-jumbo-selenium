@@ -15,7 +15,7 @@ pipeline{
         stage('Test') {
             steps {
                 // Ejecuta las pruebas con Maven
-                sh 'mvn clean verify -Dcucumber.filter.tags="@PRUEBA1"'
+                sh 'mvn clean verify -Dcucumber.filter.tags="@PRUEBA1 or @TEST2"'
             }
         }
         // Otras etapas del pipeline
