@@ -48,16 +48,13 @@ public class BuyProductsPage extends DOM {
     }
 
     public void clickAddProduct1 (){
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        sleepThread(5000);
         scrollToElement(btnAdd1);
         onclick(btnAdd1);
     }
 
     public void clickAddProduct2() {
+        sleepThread(10000);
         scrollToElement(btnAdd2);
         onclick(btnAdd2);
     }
@@ -65,7 +62,6 @@ public class BuyProductsPage extends DOM {
     public void clickAddProduct3() {
         scrollToElement(btnAdd3);
         onclick(btnAdd3);
-
     }
 
     public void clickBtnCart(){

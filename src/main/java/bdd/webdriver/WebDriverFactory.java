@@ -41,7 +41,7 @@ public class WebDriverFactory {
     private static void initializeWebDriver() {
         ChromeOptions chromeOptions = new ChromeOptions();
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver(chromeOptions.addArguments("--disable-notifications"));
+        driver = new ChromeDriver(chromeOptions.addArguments("--disable-notifications", "--headless"));
 
         // INSTRUCCIONES PARA SIMULAR UN INTERNET LENTO
 

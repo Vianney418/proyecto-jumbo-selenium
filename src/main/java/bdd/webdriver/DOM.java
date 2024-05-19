@@ -77,5 +77,12 @@ public class DOM {
         ((JavascriptExecutor) webDriver()).executeScript("arguments[0].scrollIntoView(true);", webElement);
     }
 
+    public void sleepThread(int milis){
+        try {
+            Thread.sleep(milis);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
 }
